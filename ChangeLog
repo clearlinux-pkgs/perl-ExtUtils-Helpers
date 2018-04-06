@@ -1,5 +1,28 @@
 Revision history for ExtUtils-Helpers
 
+0.026     2016-09-09 19:26:57+02:00 Europe/Amsterdam
+          - Fix Win32 dependency
+
+0.025     2016-09-02 09:48:38+02:00 Europe/Amsterdam
+          - Remove unconditional dependency on ExtUtils::PL2Bat
+
+0.024     2016-08-16 22:02:31+02:00 Europe/Amsterdam (TRIAL RELEASE)
+          - Move pl2bat code to ExtUtils::PL2Bat
+
+0.023     2016-08-06 20:52:34+02:00 Europe/Amsterdam (TRIAL RELEASE)
+          - Make split_like_shell always unixy
+          - Remove Module::Load dependency
+          - Remove done_testing, it requires Test::More 0.88
+
+0.022     2014-03-07 13:27:09CET+0100 Europe/Amsterdam
+          Cleaned up remains of former functions
+          Skip IO layers on <5.8 for 5.6 compatability
+          Don't swallow pl2bat exceptions
+
+0.021     2013-05-06 14:57:29 Europe/Amsterdam
+          Always use the right environmental variable
+          Use configuration provided manpage extension
+
 0.020     2013-04-29 14:14:20 Europe/Amsterdam
           Fix man3_pagename for top level domains
 
