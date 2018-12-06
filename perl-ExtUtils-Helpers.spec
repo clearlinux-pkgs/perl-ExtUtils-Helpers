@@ -74,10 +74,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1ExtUtils/Helpers.pm
-/usr/lib/perl5/vendor_perl/5.28.1ExtUtils/Helpers/Unix.pm
-/usr/lib/perl5/vendor_perl/5.28.1ExtUtils/Helpers/VMS.pm
-/usr/lib/perl5/vendor_perl/5.28.1ExtUtils/Helpers/Windows.pm
+/usr/lib/perl5/vendor_perl/5.28.1/ExtUtils/Helpers.pm
+/usr/lib/perl5/vendor_perl/5.28.1/ExtUtils/Helpers/Unix.pm
+/usr/lib/perl5/vendor_perl/5.28.1/ExtUtils/Helpers/VMS.pm
+/usr/lib/perl5/vendor_perl/5.28.1/ExtUtils/Helpers/Windows.pm
 
 %files dev
 %defattr(-,root,root,-)
