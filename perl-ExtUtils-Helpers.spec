@@ -4,7 +4,7 @@
 #
 Name     : perl-ExtUtils-Helpers
 Version  : 0.026
-Release  : 17
+Release  : 18
 URL      : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz
 Summary  : ExtUtils::Helpers - Various portability utilities for module builders
