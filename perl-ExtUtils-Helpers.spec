@@ -4,13 +4,14 @@
 #
 Name     : perl-ExtUtils-Helpers
 Version  : 0.026
-Release  : 18
+Release  : 19
 URL      : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz
-Summary  : ExtUtils::Helpers - Various portability utilities for module builders
+Summary  : 'Various portability utilities for module builders'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-ExtUtils-Helpers-license = %{version}-%{release}
+Requires: perl-ExtUtils-Helpers-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -36,14 +37,24 @@ Group: Default
 license components for the perl-ExtUtils-Helpers package.
 
 
+%package perl
+Summary: perl components for the perl-ExtUtils-Helpers package.
+Group: Default
+Requires: perl-ExtUtils-Helpers = %{version}-%{release}
+
+%description perl
+perl components for the perl-ExtUtils-Helpers package.
+
+
 %prep
 %setup -q -n ExtUtils-Helpers-0.026
+cd %{_builddir}/ExtUtils-Helpers-0.026
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -53,7 +64,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -62,7 +73,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-ExtUtils-Helpers
-cp LICENSE %{buildroot}/usr/share/package-licenses/perl-ExtUtils-Helpers/LICENSE
+cp %{_builddir}/ExtUtils-Helpers-0.026/LICENSE %{buildroot}/usr/share/package-licenses/perl-ExtUtils-Helpers/8e000074722981ddbd70898e7f180a523d0b9219
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -75,10 +86,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/ExtUtils/Helpers.pm
-/usr/lib/perl5/vendor_perl/5.28.2/ExtUtils/Helpers/Unix.pm
-/usr/lib/perl5/vendor_perl/5.28.2/ExtUtils/Helpers/VMS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/ExtUtils/Helpers/Windows.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -89,4 +96,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-ExtUtils-Helpers/LICENSE
+/usr/share/package-licenses/perl-ExtUtils-Helpers/8e000074722981ddbd70898e7f180a523d0b9219
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/ExtUtils/Helpers.pm
+/usr/lib/perl5/vendor_perl/5.30.1/ExtUtils/Helpers/Unix.pm
+/usr/lib/perl5/vendor_perl/5.30.1/ExtUtils/Helpers/VMS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/ExtUtils/Helpers/Windows.pm
