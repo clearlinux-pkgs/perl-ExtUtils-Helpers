@@ -4,7 +4,7 @@
 #
 Name     : perl-ExtUtils-Helpers
 Version  : 0.026
-Release  : 21
+Release  : 22
 URL      : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz
 Summary  : 'Various portability utilities for module builders'
@@ -100,7 +100,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/ExtUtils/Helpers.pm
-/usr/lib/perl5/vendor_perl/5.30.3/ExtUtils/Helpers/Unix.pm
-/usr/lib/perl5/vendor_perl/5.30.3/ExtUtils/Helpers/VMS.pm
-/usr/lib/perl5/vendor_perl/5.30.3/ExtUtils/Helpers/Windows.pm
+/usr/lib/perl5/vendor_perl/5.32.1/ExtUtils/Helpers.pm
+/usr/lib/perl5/vendor_perl/5.32.1/ExtUtils/Helpers/Unix.pm
+/usr/lib/perl5/vendor_perl/5.32.1/ExtUtils/Helpers/VMS.pm
+/usr/lib/perl5/vendor_perl/5.32.1/ExtUtils/Helpers/Windows.pm
