@@ -7,7 +7,7 @@
 #
 Name     : perl-ExtUtils-Helpers
 Version  : 0.027
-Release  : 33
+Release  : 34
 URL      : https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.027.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.027.tar.gz
 Summary  : 'Various portability utilities for module builders'
